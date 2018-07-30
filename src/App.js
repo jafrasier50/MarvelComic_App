@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import {apiKey} from './secrets'
 class App extends Component {
 
 constructor(props) {
@@ -15,8 +15,7 @@ constructor(props) {
 }
 
 componentDidMount() {
-  fetch('https://gateway.marvel.com:443/v1/public/characters?apikey=d37664cb4168a066ea0cbd02d0cad93b'
-)
+  fetch(apiKey)
 .then(response => response.json()) 
 .then((json) => {
 
