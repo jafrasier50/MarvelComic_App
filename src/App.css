@@ -12,7 +12,28 @@
 }
 
 .navbar {
-  background-color: red;
+  background-color: #23262a;
+  color: whitesmoke;
+  display: flex;
+  padding: 10px
+}
+
+.navbar li {
   display: inline;
-  padding: 5px
+  padding-right: 30px;
+  font-size: 25px;
+  font-style: bold;
+}
+
+.footer {
+  text-align: center;
+  color: whitesmoke;
+  background-color: #23262a;
+  padding: 8px
+}
+
+.selected {
+  text-decoration: none;
+  color: whitesmoke;
+  font-style: bold
 }

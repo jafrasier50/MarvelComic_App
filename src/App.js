@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import {apiKey} from './secrets'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+
 class App extends Component {
 
 constructor(props) {
@@ -26,7 +29,6 @@ componentDidMount() {
   console.log(json.data.results)
 })
 }
-
 handleClick() { 
   let comic = this.props
     let comicItems = this.state.comics.map((mappedComic) =>{
@@ -44,11 +46,13 @@ handleClick() {
 
     return (
       <div className= 'button_container'>
+      <Navbar/>
         <h1>Comic App</h1>
 
         <button className='button' onClick= {this.handleClick}>Click me a lot</button>
         <div>{this.state.comicItems}</div>
         <p></p>
+        <Footer/>
       </div>
     );
   }
